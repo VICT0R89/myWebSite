@@ -178,3 +178,12 @@ const footerIcons = [
     src : "mailto:victor4guiar89@gmail.com?subject=Mensaje%20desde%20el%20formulario&body=Nombre:%20%0AMensaje:%20"
   },
 ]
+
+const imgMain = {
+  src : "imgMain-fondo.png"
+};
+
+const imgAboutMe = {
+  src : "imgAboutMe.png"
+};
+

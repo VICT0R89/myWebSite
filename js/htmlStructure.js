@@ -55,7 +55,7 @@ const addMain = () => {
       </button>      
     </div>
     <div class="img-main">
-        <img src="img/imgMain-fondo.png">
+        <img src="img/${imgMain.src}" alt=" Mi foto de fondo">
       </div>
   `
 }
@@ -65,7 +65,7 @@ const addAboutMe = () => {
   return aboutMeSection.innerHTML = `
     <div class="a-img-cont">
       <div class="img-marco">
-        <img src="img/imgAboutMe.png">
+        <img src="img/${imgAboutMe.src}" alt=" Mi imagen de fondo">
       </div>
     </div>
     <div class="a-text">
