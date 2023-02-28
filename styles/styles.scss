@@ -85,7 +85,7 @@ li{
       border-radius: .3vw;
       cursor: pointer;
       a{
-        color: whitesmoke;
+        color: $color-blue;
         font-size: 1.4vw;
       }
     }
@@ -128,7 +128,7 @@ li{
       border-radius: .3vw;
       cursor: pointer;
       a{
-        color: whitesmoke;
+        color: $color-blue;
         font-size: 1.4vw;
       }
     }
@@ -462,6 +462,25 @@ li{
   display: none;
 }
 
+#btn-leng-mode{
+  display: flex;
+  justify-content: flex-end;
+  background-color: $primary-color;
+  padding: 1vw 4vw 0 4vw;
+  .leng{
+    background-color: $secondary-color;
+    color: $color-blue;
+    padding: 1vw 1.8vw;
+    border-radius: .3vw;
+    cursor: pointer;
+  }
+  button:hover{
+    transition: .6s ease;
+    background-color: $color-blue;
+    color: $secondary-color;
+  }
+}
+
 @media screen and (max-width: 850px) {
   #mainSection{ 
     .m-text{
@@ -733,6 +752,12 @@ li{
   }
 }
 @media screen and (max-width: 350px) {
+  #btn-leng-mode{
+    .leng{
+      font-size: 3vw;
+      padding: .6vw 1.2vw;
+    }
+  }
   #f-header{
     .h-list{
       nav{

@@ -1,15 +1,8 @@
 const header = document.getElementById("f-header");
-const mainSection = document.getElementById("mainSection");
-const aboutMeSection = document.getElementById("aboutMeSection");
-const mySkillsSection = document.getElementById("mySkillsSection");
-const certificateSection = document.getElementById("certificates");
-const certificateInsign = document.getElementById("insign");
-const portfolioSection = document.getElementById("port-item");
-const contact = document.getElementById("contactInfo");
-const contact2 = document.getElementById("contactInfo2");
-const contactForm = document.getElementById("contact-form");
-const footer = document.getElementById("f-footer");
-const btn = document.getElementById("floating-btn");
+const btnHome = document.getElementById("home-btn");
+const btnLeng = document.getElementById("lenguage-btn")
+
+let changeLenguage = true;
 
 const addHeader = () => {
   return header.innerHTML = `
@@ -19,49 +12,49 @@ const addHeader = () => {
     <div class="header h-list">
       <nav>
         <ul>
-          <li><a href="#aboutMeSection">About Me</a></li>
-          <li><a href="#skillsSection">Skills</a></li>
-          <li><a href="#certificateSection">Certificates</a></li>
-          <li><a href="#portfolioSection">Projects</a></li>
-          <li><a href="#contactSection">Contact</a></li>
+          <li><a href="#aboutMeSection">${ changeLenguage ? headerText[0].en : headerText[0].sp }</a></li>
+          <li><a href="#skillsSection">${ changeLenguage ? headerText[1].en : headerText[1].sp }</a></li>
+          <li><a href="#certificateSection">${ changeLenguage ? headerText[2].en : headerText[2].sp }</a></li>
+          <li><a href="#portfolioSection">${ changeLenguage ? headerText[3].en : headerText[3].sp }</a></li>
+          <li><a href="#contactSection">${ changeLenguage ? headerText[4].en : headerText[4].sp }</a></li>
         </ul>
       </nav>
     </div>
     <div class="header h-btn">
     <button type="button">
       <a href="#contactSection">
-        Contact Me
+      ${ changeLenguage ? headerText[5].en : headerText[5].sp }
       </a>
     </button>
     </div>
   `
-}
-addHeader();
+};
 
 const addMain = () => {
+  const mainSection = document.getElementById("mainSection");
   return mainSection.innerHTML = `
     <div class="m-text">
       <h1>      
-        I’m Víctor Gutiérrez
+      ${ changeLenguage ? mainText[0].en : mainText[0].sp }
         <span>
-        Software Developer
+        ${ changeLenguage ? mainText[1].en : mainText[1].sp }
         </span>
       </h1>
       <p>
-        Software development student at Digital House looking for my first work experience in the trade. I’m a dedicated person, focused and a lover of new challenges. Always managing a solid ethical structure, autonomy, analytical and problem-solving capacity, giving the best to grow together with colleagues.
+      ${ changeLenguage ? mainText[2].en : mainText[2].sp }
       </p>
       <button type="button">
-        <a target="_blank" href="https://drive.google.com/file/d/1ki9-aeiEqHjXlAjx6TRMMClc8TZOX5I1/view">Download CV</a>
+        <a target="_blank" href="https://drive.google.com/file/d/1ki9-aeiEqHjXlAjx6TRMMClc8TZOX5I1/view">${ changeLenguage ? mainText[3].en : mainText[3].sp }</a>
       </button>      
     </div>
     <div class="img-main">
         <img src="img/${imgMain.src}" alt=" Mi foto de fondo">
       </div>
   `
-}
-addMain();
+};
 
 const addAboutMe = () => {
+  const aboutMeSection = document.getElementById("aboutMeSection");
   return aboutMeSection.innerHTML = `
     <div class="a-img-cont">
       <div class="img-marco">
@@ -69,29 +62,42 @@ const addAboutMe = () => {
       </div>
     </div>
     <div class="a-text">
-      <h1>- ABOUT ME</h1>
-      <h3>Hello everybody!</h3>
-      <h4>I am taking my first steps in the world of software development.</h4>
-      <p>I am a software development student living in Uruguay. I am passionate about learning and deepening in new technologies, as I am convinced that they can help many people to achieve a better quality of life.</p>
-      <p>I really like challenges, teamwork, meeting people to grow together and in this new world I have realized that human values are above all.
-        For this reason and because everyone can grow as much as they want and that depends on you, I have decided to dedicate my life to software development.
-      </p>
+      <h1>${ changeLenguage ? aboutMeText[0].en : aboutMeText[0].sp }</h1>
+      <h3>${ changeLenguage ? aboutMeText[1].en : aboutMeText[1].sp }</h3>
+      <h4>${ changeLenguage ? aboutMeText[2].en : aboutMeText[2].sp }</h4>
+      <p>${ changeLenguage ? aboutMeText[3].en : aboutMeText[3].sp }</p>
+      <p>${ changeLenguage ? aboutMeText[4].en : aboutMeText[4].sp }</p>
       <div class="a-btn">
         <button type="button" class="btn-hire">
-          <a href="#contact-section">
-            HIRE ME NOW
+          <a href="#contactSection">
+          ${ changeLenguage ? aboutMeText[5].en : aboutMeText[5].sp }
           </a>
         </button>
         <button type="button" class="btn-cv">
-          <a target="_blank" href="https://drive.google.com/file/d/1ki9-aeiEqHjXlAjx6TRMMClc8TZOX5I1/view">VIEW RESUME</a>
+          <a target="_blank" href="https://drive.google.com/file/d/1ki9-aeiEqHjXlAjx6TRMMClc8TZOX5I1/view">
+          ${ changeLenguage ? aboutMeText[6].en : aboutMeText[6].sp }
+          </a>
         </button>
       </div>
     </div>
   `
-}
-addAboutMe();
+};
+
+const addSkillsTitle = () => {
+  const skill = document.getElementById("skillsSection");
+  return skill.innerHTML = `
+  <div class="s-title">
+    <h1>${ changeLenguage ? skillsText[0].en : skillsText[0].sp }</h1>
+  </div>
+  <p class="s-p">
+  ${ changeLenguage ? skillsText[1].en : skillsText[1].sp }
+  </p>
+  <div id="mySkillsSection"></div>
+  `
+};
 
 const addSkills = () =>{
+  const mySkillsSection = document.getElementById("mySkillsSection");
   return (mySkillsSection.innerHTML =     
     skills.map((x)=>{
       let {name, value} = x;
@@ -107,10 +113,26 @@ const addSkills = () =>{
       `
     }).join("")
   )
-}
-addSkills();
+};
+
+const addCertificatesTitle = () =>{
+  const certificate = document.getElementById("certificateSection");
+  certificate.innerHTML = `
+    <div class="c-title">
+      <h1>${ changeLenguage ? certificateText[0].en : certificateText[0].sp }</h1>
+    </div>
+    <p class="c-p">
+    ${ changeLenguage ? certificateText[1].en : certificateText[1].sp }
+    </p>
+    <div class="c-container">
+      <div id="certificates"></div>
+      <div id="insign"></div>
+    </div>
+  `
+};
 
 const addCertificates = () =>{
+  const certificateSection = document.getElementById("certificates");
   return (certificateSection.innerHTML =
     certificates.map((x)=>{
       let { imgSrc, route } = x;
@@ -123,10 +145,10 @@ const addCertificates = () =>{
       `
     }).join("")
   )
-}
-addCertificates();
+};
 
 const addIng = () =>{
+  const certificateInsign = document.getElementById("insign");
   return (certificateInsign.innerHTML =
     ing.map((x)=>{
       let { imgSrc, route } = x;
@@ -139,10 +161,23 @@ const addIng = () =>{
       `
     }).join("")
   )
-}
-addIng();
+};
+
+const addProjectsTitle = () => {
+  const projects = document.getElementById("portfolioSection");
+  projects.innerHTML = `
+    <div class="port-title">
+      <h2>${ changeLenguage ? portTitleText[0].en : portTitleText[0].sp }</h2>
+      <p>${ changeLenguage ? portTitleText[1].en : portTitleText[1].sp }</p>
+    </div>
+    <div class="port-items">
+      <div id="port-item"></div>
+    </div>
+  `
+};
 
 const addProjects = () => {
+  const portfolioSection = document.getElementById("port-item");
   return (portfolioSection.innerHTML =
     projects.map((x)=>{
       let { src, route } = x;
@@ -155,10 +190,26 @@ const addProjects = () => {
       `
     }).join("")
     )
-}
-addProjects();
+};
+
+const addContactInfoTitle = () => {
+  const contact = document.getElementById("contactSection");
+  contact.innerHTML = `
+    <div class="contact-title">
+      <h2 class="title">${ changeLenguage ? contactText[0].en : contactText[0].sp }</h2>
+      <p>${ changeLenguage ? contactText[1].en : contactText[1].sp }</p>
+    </div>
+    <div class="contact-container">
+      <div id="contact">
+        <div id="contactInfo"></div>
+        <div id="contactInfo2"></div>
+      </div>
+    </div>
+  `
+};
 
 const addContactInfo = () =>{
+  const contact = document.getElementById("contactInfo");
   return (contact.innerHTML =
     contactInfo.map ((x) => {
       let { icono, title, info, href } = x;
@@ -175,10 +226,10 @@ const addContactInfo = () =>{
       `
     }).join("")
   );
-}
-addContactInfo();
+};
 
 const addContact = () =>{
+  const contact2 = document.getElementById("contactInfo2");
   return (contact2.innerHTML = 
     contactInfo2.map((x)=>{
       let { icono, title, info, url } = x;
@@ -195,10 +246,10 @@ const addContact = () =>{
       `
     }).join("")
   );
-}
-addContact();
+};
 
 const addFooter = () => {
+  const footer = document.getElementById("f-footer");
   return (footer.innerHTML =
     footerIcons.map((x) => {
       let { icono, src } = x;
@@ -212,16 +263,48 @@ const addFooter = () => {
     }).join("")
     );
 };
-addFooter();
+
+
+const update = () =>{
+  addHeader();
+  addMain();
+  addAboutMe();
+  addSkillsTitle();
+  addSkills();
+  addCertificatesTitle();
+  addCertificates();
+  addIng();
+  addProjectsTitle();
+  addProjects();
+  addContactInfoTitle();
+  addContactInfo();
+  addContact();
+  addFooter();
+};
+update();
 
 window.onscroll = function() {
   if (window.pageYOffset > header.offsetHeight) {
-    btn.style.display = "block";
+    btnHome.style.display = "block";
   } else {
-    btn.style.display = "none";
+    btnHome.style.display = "none";
   }
 };
 
-btn.addEventListener('click', () =>{
-  header.scrollIntoView();
-})
+btnHome.addEventListener('click', () =>{
+  btnLeng.scrollIntoView();
+});
+
+btnLeng.addEventListener('click', () =>{
+  if(changeLenguage){
+    changeLenguage = false;
+    btnLeng.innerText = "English?";
+    btnHome.innerText = "INICIO";
+    update();
+  } else {
+    changeLenguage = true;
+    btnLeng.innerText = "Español?"
+    btnHome.innerText = "HOME";
+    update();
+  }
+});
