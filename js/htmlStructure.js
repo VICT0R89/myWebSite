@@ -1,6 +1,8 @@
 const header = document.getElementById("f-header");
 const btnHome = document.getElementById("home-btn");
-const btnLeng = document.getElementById("lenguage-btn")
+const btnLeng = document.getElementById("lenguage-btn");
+const sliderTest = document.getElementById("sliderTest");
+const sliderTest2 = document.getElementById("sliderTest2");
 
 let changeLenguage = true;
 
@@ -131,33 +133,57 @@ const addCertificatesTitle = () =>{
   `
 };
 
-const addCertificates = () =>{
-  const certificateSection = document.getElementById("certificates");
-  return (certificateSection.innerHTML =
+const addSlider = () => {
+  sliderTest.innerHTML=`
+  <button class="prev"><</button>
+  <div class="slider" id="slider">
+    <ul class="slides" id="slides">
+    </ul>
+  </div>
+  <button class="next">></button>
+  `
+  
+}
+
+const addCertificatesSlider = () =>{
+  const slides = document.getElementById("slides")
+  return (slides.innerHTML =
     certificates.map((x)=>{
       let { imgSrc, route } = x;
       return `
-        <div class="c-img-container">
+        <li class="slide">
           <a href="${route}" target="_blank">
-            <img src="img/cert${imgSrc}.png" alt="imagen de certificado">
+            <img class="slide-img" src="img/cert${imgSrc}.png" alt="imagen de certificado">
           </a>          
-        </div>
+        </li>
       `
     }).join("")
   )
 };
 
-const addIng = () =>{
-  const certificateInsign = document.getElementById("insign");
-  return (certificateInsign.innerHTML =
+const addSlider2 = () => {
+  sliderTest2.innerHTML=`
+  <button class="prev2"><</button>
+  <div class="slider" id="slider2">
+    <ul class="slides" id="slides2">
+    </ul>
+  </div>
+  <button class="next2">></button>
+  `
+  
+};
+
+const addInsgSlider = () =>{
+  const slides2 = document.getElementById("slides2")
+  return (slides2.innerHTML =
     ing.map((x)=>{
       let { imgSrc, route } = x;
       return `
-        <div class="c-img-container">
+        <li class="slide">
           <a href="${route}" target="_blank">
-            <img src="img/ing${imgSrc}.png" alt="imagen de insignia">
-          </a>
-        </div>
+            <img class="slide-img ing-img" src="img/ing${imgSrc}.png" alt="imagen de certificado">
+          </a>          
+        </li>
       `
     }).join("")
   )
@@ -264,25 +290,6 @@ const addFooter = () => {
     );
 };
 
-
-const update = () =>{
-  addHeader();
-  addMain();
-  addAboutMe();
-  addSkillsTitle();
-  addSkills();
-  addCertificatesTitle();
-  addCertificates();
-  addIng();
-  addProjectsTitle();
-  addProjects();
-  addContactInfoTitle();
-  addContactInfo();
-  addContact();
-  addFooter();
-};
-update();
-
 window.onscroll = function() {
   if (window.pageYOffset > header.offsetHeight) {
     btnHome.style.display = "block";
@@ -308,3 +315,182 @@ btnLeng.addEventListener('click', () =>{
     update();
   }
 });
+
+// SLIDER LOGIC ----------------------
+const crearSlider = () =>{
+
+  const slides = document.getElementById("slides");
+  const prevButton = document.querySelector(".prev");
+  const nextButton = document.querySelector(".next");
+  let slideWidth = 13;
+  let currentSlide = 1;
+  let intervalId = null;
+
+  const modificarWidth = (size) => {
+    size < 1800 && size >= 1600 ? slideWidth = 14 : slideWidth = slideWidth
+    size < 1600 && size >= 1200 ? slideWidth = 15 : slideWidth = slideWidth
+    size < 1200 && size >= 800 ? slideWidth = 17 : slideWidth = slideWidth
+    size < 800 ? slideWidth = 19 : slideWidth = slideWidth
+  };
+
+  const moveRight = () => {
+    modificarWidth(window.innerWidth)
+    if (currentSlide === certificates.length) {
+      currentSlide = currentSlide
+    } else {
+      currentSlide++;
+      slides.style.transform = `translateX(-${slideWidth * (currentSlide -1)}vw)`;
+    }
+  };
+
+  const moveLeft = () => {
+    modificarWidth(window.innerWidth)
+    if (currentSlide === 1) {
+      currentSlide = currentSlide
+    } else {
+      currentSlide--;
+      slides.style.transform = `translateX(-${slideWidth * (currentSlide -1)}vw)`;
+    }
+  };
+
+  let aux = false
+  const move = () => {
+    modificarWidth(window.innerWidth)
+    if (currentSlide < certificates.length && !aux) {
+      currentSlide++;
+      slides.style.transform = `translateX(-${slideWidth * (currentSlide - 1)}vw)`
+    } else if (currentSlide === certificates.length && !aux){
+      aux = true;
+    } else if (currentSlide > 1 && aux){
+      currentSlide--;
+      slides.style.transform = `translateX(-${slideWidth * (currentSlide - 1)}vw)`
+    } else if (currentSlide === 1 && aux){
+      aux = false;
+    }
+  };
+
+  const startInterval = () => {
+    intervalId = setInterval(() => {
+      move();
+    }, 1000);
+  };
+
+  const stopInterval = () => {
+    clearInterval(intervalId);
+  };
+
+  sliderTest.addEventListener("mouseenter", () => {
+    stopInterval();
+  });
+
+  sliderTest.addEventListener("mouseleave", () => {
+    startInterval();
+  });
+
+  prevButton.addEventListener("click", () => {
+    stopInterval();
+    moveLeft();
+  });
+
+  nextButton.addEventListener("click", () => {
+    stopInterval();
+    moveRight();
+  });
+
+  startInterval();
+
+  const slides2 = document.getElementById("slides2");
+  const prevButton2 = document.querySelector(".prev2");
+  const nextButton2 = document.querySelector(".next2");
+  let slideWidth2 = 10;
+  let currentSlide2 = 1;
+  let intervalId2 = null;
+
+  const moveRight2 = () => {
+    modificarWidth(window.innerWidth)
+    if (currentSlide2 === certificates.length) {
+      currentSlide2 = currentSlide2
+    } else {
+      currentSlide2++;
+      slides2.style.transform = `translateX(-${slideWidth2 * (currentSlide2 -1)}vw)`;
+    }
+  };
+
+  const moveLeft2 = () => {
+    modificarWidth(window.innerWidth)
+    if (currentSlide2 === 1) {
+      currentSlide2 = currentSlide2
+    } else {
+      currentSlide2--;
+      slides2.style.transform = `translateX(-${slideWidth2 * (currentSlide2 -1)}vw)`;
+    }
+  };
+
+  let aux2 = false
+  const move2 = () => {
+    modificarWidth(window.innerWidth)
+    if (currentSlide2 < certificates.length && !aux2) {
+      currentSlide2++;
+      slides2.style.transform = `translateX(-${slideWidth2 * (currentSlide2 - 1)}vw)`
+    } else if (currentSlide2 === certificates.length && !aux2){
+      aux2 = true;
+    } else if (currentSlide2 > 1 && aux2){
+      currentSlide2--;
+      slides2.style.transform = `translateX(-${slideWidth2 * (currentSlide2 - 1)}vw)`
+    } else if (currentSlide2 === 1 && aux2){
+      aux2 = false;
+    }
+  };
+
+  const startInterval2 = () => {
+    intervalId2 = setInterval(() => {
+      move2();
+    }, 1000);
+  };
+
+  const stopInterval2 = () => {
+    clearInterval(intervalId2);
+  };
+
+  sliderTest2.addEventListener("mouseenter", () => {
+    stopInterval2();
+  });
+
+  sliderTest2.addEventListener("mouseleave", () => {
+    startInterval2();
+  });
+
+  prevButton2.addEventListener("click", () => {
+    stopInterval2();
+    moveLeft2();
+  });
+
+  nextButton2.addEventListener("click", () => {
+    stopInterval2();
+    moveRight2();
+  });
+
+  startInterval2();
+
+}
+
+const update = () =>{
+  addHeader();
+  addMain();
+  addAboutMe();
+  addSkillsTitle();
+  addSkills();
+  addCertificatesTitle();
+  addSlider();
+  addCertificatesSlider();
+  addSlider2();
+  addInsgSlider();
+  addProjectsTitle();
+  addProjects();
+  addContactInfoTitle();
+  addContactInfo();
+  addContact();
+  addFooter();
+  crearSlider()
+};
+update();
