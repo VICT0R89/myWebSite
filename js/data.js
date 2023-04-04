@@ -234,6 +234,10 @@ const projects = [
     route: "https://vict0r89.github.io/eCommerce-website/"
   },
   {
+    src: "10",
+    route: "https://vict0r89.github.io/ToDo-App/"
+  },
+  {
     src: "2",
     route: "https://vict0r89.github.io/Calculator/"
   },
