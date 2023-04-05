@@ -257,6 +257,10 @@ const projects = [
     src: "8",
     route: "https://vict0r89.github.io/BreakOut-Game/"
   },
+  {
+    src: "11",
+    route: "https://vict0r89.github.io/MemoryGame/"
+  },
 ];
 
 const contactInfo = [

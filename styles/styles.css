@@ -311,27 +311,6 @@ li {
   text-align: center;
   padding: 1.5vw 0;
 }
-#portfolioSection .port-items {
-  padding: 4vw;
-  width: 50%;
-  display: flex;
-  justify-content: center;
-}
-#portfolioSection .port-items #port-item {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1.1vw;
-}
-#portfolioSection .port-items #port-item .c-img-container {
-  border: 2px solid #022144;
-}
-#portfolioSection .port-items #port-item .c-img-container a {
-  cursor: pointer;
-}
-#portfolioSection .port-items #port-item .c-img-container a img {
-  width: 100%;
-  height: 100%;
-}
 
 #contactSection {
   display: flex;
@@ -620,9 +599,6 @@ li {
   #portfolioSection .port-title p {
     padding: 2vw 0;
   }
-  #portfolioSection .port-items {
-    width: 80%;
-  }
   #contactSection .contact-title .title {
     font-size: 5vw;
     padding-bottom: 4vw;
@@ -810,8 +786,14 @@ li {
   width: 15vw;
   border-radius: 50%;
 }
+.sliderTest .slider .slides .slide .proj-img {
+  height: 90%;
+  width: 15vw;
+}
 .sliderTest .prev,
 .sliderTest .next,
+.sliderTest .prev3,
+.sliderTest .next3,
 .sliderTest .prev2,
 .sliderTest .next2 {
   margin: 0 2rem;
@@ -828,6 +810,8 @@ li {
 }
 .sliderTest .prev:hover,
 .sliderTest .next:hover,
+.sliderTest .prev3:hover,
+.sliderTest .next3:hover,
 .sliderTest .prev2:hover,
 .sliderTest .next2:hover {
   opacity: 1;

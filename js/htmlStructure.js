@@ -3,6 +3,7 @@ const btnHome = document.getElementById("home-btn");
 const btnLeng = document.getElementById("lenguage-btn");
 const sliderTest = document.getElementById("sliderTest");
 const sliderTest2 = document.getElementById("sliderTest2");
+const sliderTest3 = document.getElementById("sliderTest3");
 
 let changeLenguage = true;
 
@@ -142,7 +143,6 @@ const addSlider = () => {
   </div>
   <button class="next">></button>
   `
-  
 }
 
 const addCertificatesSlider = () =>{
@@ -170,7 +170,6 @@ const addSlider2 = () => {
   </div>
   <button class="next2">></button>
   `
-  
 };
 
 const addInsgSlider = () =>{
@@ -202,20 +201,31 @@ const addProjectsTitle = () => {
   `
 };
 
-const addProjects = () => {
-  const portfolioSection = document.getElementById("port-item");
-  return (portfolioSection.innerHTML =
+const addSlider3 = () => {
+  sliderTest3.innerHTML=`
+  <button class="prev3"><</button>
+  <div class="slider" id="slider3">
+    <ul class="slides" id="slides3">
+    </ul>
+  </div>
+  <button class="next3">></button>
+  `
+};
+
+const addProjectsSlider = () => {
+  const slides3 = document.getElementById("slides3")
+  return (slides3.innerHTML =
     projects.map((x)=>{
       let { src, route } = x;
       return `
-      <div class="c-img-container">
-        <a href="${route}" target="_blank">
-          <img src="img/img${src}.jpg" alt="imagen de proyecto">
-        </a>
-      </div>
+        <li class="slide proj-slide">
+          <a href="${route}" target="_blank">
+            <img class="slide-img proj-img" src="img/img${src}.jpg" alt="imagen de proyecto">
+          </a>         
+        </li>
       `
     }).join("")
-    )
+  )
 };
 
 const addContactInfoTitle = () => {
@@ -319,16 +329,18 @@ btnLeng.addEventListener('click', () =>{
 // SLIDER LOGIC ----------------------
 const crearSlider = () =>{
 
+  // SLIDER 1 ----------------------------------------------
+
   const slides = document.getElementById("slides");
   const prevButton = document.querySelector(".prev");
   const nextButton = document.querySelector(".next");
-  let slideWidth = 13;
+  let slideWidth = 12.5;
   let currentSlide = 1;
   let intervalId = null;
 
   const modificarWidth = (size) => {
-    size < 1800 && size >= 1600 ? slideWidth = 14 : slideWidth = slideWidth
-    size < 1600 && size >= 1200 ? slideWidth = 15 : slideWidth = slideWidth
+    size < 1800 && size >= 1600 ? slideWidth = 13.5 : slideWidth = slideWidth
+    size < 1600 && size >= 1200 ? slideWidth = 14.6 : slideWidth = slideWidth
     size < 1200 && size >= 800 ? slideWidth = 17 : slideWidth = slideWidth
     size < 800 ? slideWidth = 19 : slideWidth = slideWidth
   };
@@ -399,6 +411,8 @@ const crearSlider = () =>{
 
   startInterval();
 
+  // SLIDER 2 -------------------------------------------------------
+
   const slides2 = document.getElementById("slides2");
   const prevButton2 = document.querySelector(".prev2");
   const nextButton2 = document.querySelector(".next2");
@@ -406,8 +420,15 @@ const crearSlider = () =>{
   let currentSlide2 = 1;
   let intervalId2 = null;
 
+  const modificarWidth2 = (size) => {
+    size < 1800 && size >= 1600 ? slideWidth2 = 7 : slideWidth2 = slideWidth2
+    size < 1600 && size >= 1200 ? slideWidth2 = 8 : slideWidth2 = slideWidth2
+    size < 1200 && size >= 800 ? slideWidth2 = 10.5 : slideWidth2 = slideWidth2
+    size < 800 ? slideWidth2 = 13.5 : slideWidth2 = slideWidth2
+  };
+
   const moveRight2 = () => {
-    modificarWidth(window.innerWidth)
+    modificarWidth2(window.innerWidth)
     if (currentSlide2 === certificates.length) {
       currentSlide2 = currentSlide2
     } else {
@@ -417,7 +438,7 @@ const crearSlider = () =>{
   };
 
   const moveLeft2 = () => {
-    modificarWidth(window.innerWidth)
+    modificarWidth2(window.innerWidth)
     if (currentSlide2 === 1) {
       currentSlide2 = currentSlide2
     } else {
@@ -428,15 +449,15 @@ const crearSlider = () =>{
 
   let aux2 = false
   const move2 = () => {
-    modificarWidth(window.innerWidth)
+    modificarWidth2(window.innerWidth)
     if (currentSlide2 < certificates.length && !aux2) {
       currentSlide2++;
-      slides2.style.transform = `translateX(-${slideWidth2 * (currentSlide2 - 1)}vw)`
+      slides2.style.transform = `translateX(-${slideWidth2 * (currentSlide2 -1)}vw)`
     } else if (currentSlide2 === certificates.length && !aux2){
       aux2 = true;
     } else if (currentSlide2 > 1 && aux2){
       currentSlide2--;
-      slides2.style.transform = `translateX(-${slideWidth2 * (currentSlide2 - 1)}vw)`
+      slides2.style.transform = `translateX(-${slideWidth2 * (currentSlide2 -1)}vw)`
     } else if (currentSlide2 === 1 && aux2){
       aux2 = false;
     }
@@ -472,6 +493,88 @@ const crearSlider = () =>{
 
   startInterval2();
 
+  // SLIDER 3 -------------------------------------------------------
+
+  const slides3 = document.getElementById("slides3");
+  const prevButton3 = document.querySelector(".prev3");
+  const nextButton3 = document.querySelector(".next3");
+  let slideWidth3 = 11;
+  let currentSlide3 = 1;
+  let intervalId3 = null;
+
+  const modificarWidth3 = (size) => {
+    size < 1800 && size >= 1600 ? slideWidth3 = 11.5 : slideWidth3 = slideWidth3
+    size < 1600 && size >= 1200 ? slideWidth3 = 12 : slideWidth3 = slideWidth3
+    size < 1200 && size >= 800 ? slideWidth3 = 13.5 : slideWidth3 = slideWidth3
+    size < 800 ? slideWidth3 = 16 : slideWidth3 = slideWidth3
+  };
+
+  const moveRight3 = () => {
+    modificarWidth3(window.innerWidth)
+    if (currentSlide3 === projects.length) {
+      currentSlide3 = currentSlide3
+    } else {
+      currentSlide3++;
+      slides3.style.transform = `translateX(-${slideWidth3 * (currentSlide3 -1)}vw)`;
+    }
+  };
+
+  const moveLeft3 = () => {
+    modificarWidth3(window.innerWidth)
+    if (currentSlide3 === 1) {
+      currentSlide3 = currentSlide3
+    } else {
+      currentSlide3--;
+      slides3.style.transform = `translateX(-${slideWidth3 * (currentSlide3 -1)}vw)`;
+    }
+  };
+
+  let aux3 = false
+  const move3 = () => {
+    modificarWidth3(window.innerWidth)
+    if (currentSlide3 < projects.length && !aux3) {
+      currentSlide3++;
+      slides3.style.transform = `translateX(-${slideWidth3 * (currentSlide3 - 1)}vw)`
+    } else if (currentSlide3 === projects.length && !aux3){
+      aux3 = true;
+    } else if (currentSlide3 > 1 && aux3){
+      currentSlide3--;
+      slides3.style.transform = `translateX(-${slideWidth3 * (currentSlide3 - 1)}vw)`
+    } else if (currentSlide3 === 1 && aux3){
+      aux3 = false;
+    }
+  };
+
+  const startInterval3 = () => {
+    intervalId3 = setInterval(() => {
+      move3();
+    }, 1000);
+  };
+
+  const stopInterval3 = () => {
+    clearInterval(intervalId3);
+  };
+
+  sliderTest3.addEventListener("mouseenter", () => {
+    stopInterval3();
+  });
+
+  sliderTest3.addEventListener("mouseleave", () => {
+    startInterval3();
+  });
+
+  prevButton3.addEventListener("click", () => {
+    stopInterval3();
+    moveLeft3();
+  });
+
+  nextButton3.addEventListener("click", () => {
+    stopInterval3();
+    moveRight3();
+  });
+
+  startInterval3();
+
 }
 
 const update = () =>{
@@ -486,7 +589,8 @@ const update = () =>{
   addSlider2();
   addInsgSlider();
   addProjectsTitle();
-  addProjects();
+  addSlider3();
+  addProjectsSlider();
   addContactInfoTitle();
   addContactInfo();
   addContact();
