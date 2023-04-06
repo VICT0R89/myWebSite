@@ -281,6 +281,7 @@ li {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 }
 #portfolioSection .port-title h2 {
   position: relative;
@@ -307,7 +308,7 @@ li {
   height: 0.15vw;
   background-color: #FBD214;
 }
-#portfolioSection .port-title p {
+#portfolioSection .p-p {
   text-align: center;
   padding: 1.5vw 0;
 }
@@ -413,12 +414,19 @@ li {
   bottom: 50%;
   right: 2%;
   background-color: #FBD214;
+  transition: background-color 1s ease;
   color: rgb(226, 226, 226);
   padding: 35px 20px;
   border-radius: 50%;
   border: 1px solid #FBD214;
   cursor: pointer;
   display: none;
+}
+
+.floating-btn:hover {
+  background-color: #022144;
+  border: 1px solid #022144;
+  color: #FBD214;
 }
 
 #btn-leng-mode {
@@ -438,6 +446,63 @@ li {
   transition: 0.6s ease;
   background-color: #022144;
   color: #FBD214;
+}
+
+.sliderStick {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left: 50%;
+  transform: translate(-50%);
+  margin-bottom: 2rem;
+  width: 90%;
+  height: 15rem;
+  background-color: rgb(226, 226, 226);
+}
+.sliderStick .project {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+.sliderStick .project .link img {
+  width: 180px;
+  height: 180px;
+}
+.sliderStick .project .link .certImg {
+  height: 170px;
+  width: 220px;
+}
+.sliderStick .project .link .ingImg {
+  border-radius: 50%;
+}
+.sliderStick .slick-prev, .sliderStick .slick-next {
+  border: solid 2px #022144;
+  background-color: #022144;
+  transition: background-color 1s ease;
+  color: #FBD214;
+  font-size: 2rem;
+  padding: 0.7rem 1rem;
+  border-radius: 50%;
+  margin: 0 0.7rem;
+  cursor: pointer;
+}
+.sliderStick .slick-prev:hover, .sliderStick .slick-next:hover {
+  background-color: #FBD214;
+  color: #022144;
+  border: solid 2px #FBD214;
+}
+
+.portDiv {
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.portDiv .portSlider {
+  width: 100%;
 }
 
 @media screen and (max-width: 850px) {
@@ -743,76 +808,33 @@ li {
     display: none;
   }
 }
-.sliderTest {
-  background-color: rgb(226, 226, 226);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 2rem;
-  height: 100%;
-  width: 90%;
+.section {
+  opacity: 0;
+  transform: translateX(-100%);
+  animation: slide-in 1s forwards;
 }
-.sliderTest .slider {
-  position: relative;
-  display: flex;
-  width: 100%;
-  height: 70%;
-  overflow: hidden;
-  margin: 0 auto;
+
+.section.out {
+  animation: slide-out 1s forwards;
 }
-.sliderTest .slider .slides {
-  display: flex;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  transition: transform 0.5s ease-in-out;
-  transform: translateX(10vw);
+
+@keyframes slide-in {
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
-.sliderTest .slider .slides .slide {
-  position: relative;
-  display: flex;
-  align-items: center;
-  opacity: 1;
-  transition: opacity 0.5s ease-in-out;
-}
-.sliderTest .slider .slides .slide .slide-img {
-  border: 2px solid #022144;
-  margin: 1rem;
-  width: 20vw;
-  height: 90%;
-}
-.sliderTest .slider .slides .slide .ing-img {
-  border: none;
-  width: 15vw;
-  border-radius: 50%;
-}
-.sliderTest .slider .slides .slide .proj-img {
-  height: 90%;
-  width: 15vw;
-}
-.sliderTest .prev,
-.sliderTest .next,
-.sliderTest .prev3,
-.sliderTest .next3,
-.sliderTest .prev2,
-.sliderTest .next2 {
-  margin: 0 2rem;
-  top: 50%;
-  background-color: #022144;
-  padding: 1rem;
-  border-radius: 50%;
-  color: white;
-  font-size: 24px;
-  cursor: pointer;
-  transition: opacity 0.2s ease-in-out;
-  z-index: 1;
-  opacity: 0.5;
-}
-.sliderTest .prev:hover,
-.sliderTest .next:hover,
-.sliderTest .prev3:hover,
-.sliderTest .next3:hover,
-.sliderTest .prev2:hover,
-.sliderTest .next2:hover {
-  opacity: 1;
+@keyframes slide-out {
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
 }/*# sourceMappingURL=styles.css.map */
