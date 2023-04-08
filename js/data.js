@@ -23,6 +23,10 @@ const headerText = [
     en : "Contact Me",
     sp : "Contáctame"
   },
+  {
+    en : "Español?",
+    sp : "English?"
+  },
 ];
 
 const mainText = [

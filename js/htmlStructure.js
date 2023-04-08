@@ -1,6 +1,6 @@
 const header = document.getElementById("f-header");
 const btnHome = document.getElementById("home-btn");
-const btnLeng = document.getElementById("lenguage-btn");
+
 
 let changeLenguage = true;
 
@@ -21,11 +21,12 @@ const addHeader = () => {
       </nav>
     </div>
     <div class="header h-btn">
-    <button type="button">
-      <a href="#contactSection">
-      ${ changeLenguage ? headerText[5].en : headerText[5].sp }
-      </a>
-    </button>
+      <button type="button">
+        <a href="#contactSection">
+        ${ changeLenguage ? headerText[5].en : headerText[5].sp }
+        </a>
+      </button>
+      <button id="lenguage-btn" class="leng">${ changeLenguage ? headerText[6].en : headerText[6].sp }</button>
     </div>
   `
 };
@@ -273,22 +274,25 @@ window.onscroll = function() {
 };
 
 btnHome.addEventListener('click', () =>{
-  btnLeng.scrollIntoView({behavior:"smooth"});
+  header.scrollIntoView({behavior:"smooth"});
 });
 
-btnLeng.addEventListener('click', () =>{
-  if(changeLenguage){
-    changeLenguage = false;
-    btnLeng.innerText = "English?";
-    btnHome.innerText = "INICIO";
-    update();
-  } else {
-    changeLenguage = true;
-    btnLeng.innerText = "Español?"
-    btnHome.innerText = "HOME";
-    update();
-  }
-});
+const changeLeng = () => {
+  const btnLeng = document.getElementById("lenguage-btn");
+  btnLeng.addEventListener('click', () =>{
+    if(changeLenguage){
+      changeLenguage = false;
+      btnLeng.innerText = "English?";
+      btnHome.innerText = "INICIO";
+      update();
+    } else {
+      changeLenguage = true;
+      btnLeng.innerText = "Español?"
+      btnHome.innerText = "HOME";
+      update();
+    }
+  });
+};
 
 const addSlider = () =>{
   addCertificates();
@@ -322,10 +326,11 @@ const update = () =>{
   addSlider();
   slickFunction();
   addAnimateTime();
+  changeLeng();
 };
 update();
 
-window.addEventListener("scroll", function() {
+/* window.addEventListener("scroll", function() {
   let windowTop = window.pageYOffset || document.documentElement.scrollTop;
 
   let sections = document.querySelectorAll(".section");
@@ -341,4 +346,4 @@ window.addEventListener("scroll", function() {
       section.classList.remove("in");
     }
   }
-});
+}); */

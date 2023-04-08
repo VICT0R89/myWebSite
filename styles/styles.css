@@ -46,10 +46,18 @@ li {
   transition: 0.2s ease-out;
   border-bottom: 4px solid #FBD214;
 }
+#f-header .h-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 #f-header .h-btn button {
   background-color: #FBD214;
   padding: 1vw 1.8vw;
   border-radius: 0.3vw;
+  font-size: 1rem;
+  color: #022144;
+  font-size: 1.4vw;
   cursor: pointer;
 }
 #f-header .h-btn button a {
@@ -429,25 +437,6 @@ li {
   color: #FBD214;
 }
 
-#btn-leng-mode {
-  display: flex;
-  justify-content: flex-end;
-  background-color: #0B0A0A;
-  padding: 1vw 4vw 0 4vw;
-}
-#btn-leng-mode .leng {
-  background-color: #FBD214;
-  color: #022144;
-  padding: 1vw 1.8vw;
-  border-radius: 0.3vw;
-  cursor: pointer;
-}
-#btn-leng-mode button:hover {
-  transition: 0.6s ease;
-  background-color: #022144;
-  color: #FBD214;
-}
-
 .sliderStick {
   display: flex;
   justify-content: center;
@@ -576,13 +565,39 @@ li {
   #skillsSection #mySkillsSection .skills-bars .skill-bar {
     height: 3vw;
   }
+  .sliderStick {
+    margin-bottom: 2rem;
+    width: 90%;
+    height: 250px;
+  }
+  .sliderStick .project {
+    margin: 0 10px;
+  }
+  .sliderStick .project .link img {
+    width: 180px;
+    height: 180px;
+  }
+  .sliderStick .project .link .certImg {
+    height: 180px;
+    width: 180px;
+  }
+  .sliderStick .slick-prev, .sliderStick .slick-next {
+    border: solid 2px #022144;
+    font-size: 2rem;
+  }
+  .sliderStick .slick-prev:hover, .sliderStick .slick-next:hover {
+    border: solid 2px #FBD214;
+  }
 }
 @media screen and (max-width: 500px) {
   #f-header .h-list nav ul {
     font-size: 2.3vw;
   }
+  #f-header .h-btn button {
+    font-size: 2vw;
+  }
   #f-header .h-btn button a {
-    font-size: 2.4vw;
+    font-size: 2vw;
   }
   #mainSection .m-text {
     width: 100%;
@@ -695,17 +710,39 @@ li {
   .floating-btn {
     padding: 25px 8px;
   }
+  .sliderStick {
+    margin-bottom: 2rem;
+    width: 90%;
+    height: 250px;
+  }
+  .sliderStick .project {
+    margin: 0 10px;
+  }
+  .sliderStick .project .link img {
+    width: 150px;
+    height: 150px;
+  }
+  .sliderStick .project .link .certImg {
+    height: 150px;
+    width: 150px;
+  }
+  .sliderStick .slick-prev, .sliderStick .slick-next {
+    border: solid 1px #022144;
+    font-size: 1.5rem;
+  }
+  .sliderStick .slick-prev:hover, .sliderStick .slick-next:hover {
+    border: solid 1px #FBD214;
+  }
 }
 @media screen and (max-width: 350px) {
-  #btn-leng-mode .leng {
-    font-size: 3vw;
-    padding: 0.6vw 1.2vw;
-  }
   #f-header .h-list nav ul {
-    font-size: 2.7vw;
+    font-size: 2vw;
+  }
+  #f-header .h-btn button {
+    font-size: 2vw;
   }
   #f-header .h-btn button a {
-    font-size: 2.7vw;
+    font-size: 2vw;
   }
   #mainSection .m-text h1 {
     font-size: 5vw;
@@ -794,6 +831,30 @@ li {
     font-weight: normal;
     padding: 13px 5px;
   }
+  .sliderStick {
+    margin-bottom: 2rem;
+    width: 90%;
+    height: 150px;
+  }
+  .sliderStick .project {
+    margin: 0 10px;
+  }
+  .sliderStick .project .link img {
+    width: 100px;
+    height: 100px;
+  }
+  .sliderStick .project .link .certImg {
+    height: 100px;
+    width: 100px;
+  }
+  .sliderStick .slick-prev, .sliderStick .slick-next {
+    border: solid 1px #022144;
+    font-size: 1rem;
+    margin: 0;
+  }
+  .sliderStick .slick-prev:hover, .sliderStick .slick-next:hover {
+    border: solid 1px #FBD214;
+  }
 }
 @media screen and (max-width: 250px) {
   #m-footer .f-footer {
@@ -806,35 +867,5 @@ li {
   }
   #m-footer #f-footer {
     display: none;
-  }
-}
-.section {
-  opacity: 0;
-  transform: translateX(-100%);
-  animation: slide-in 1s forwards;
-}
-
-.section.out {
-  animation: slide-out 1s forwards;
-}
-
-@keyframes slide-in {
-  from {
-    opacity: 0;
-    transform: translateX(-100%);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-@keyframes slide-out {
-  from {
-    opacity: 1;
-    transform: translateX(0);
-  }
-  to {
-    opacity: 0;
-    transform: translateX(-100%);
   }
 }/*# sourceMappingURL=styles.css.map */

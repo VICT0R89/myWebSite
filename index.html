@@ -7,23 +7,22 @@
   <link rel="shortcut icon" href="img/logo.ico" type="image/x-icon">
   <!-- SCRIPT SLICK STYLES -->
   <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+  <!-- ---------------- estilos AOS ---------------- -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <!-- SCRIPT MY STYLES -->
   <link rel="stylesheet" href="styles/styles.css">
   <title>Víctor Gutiérrez</title>
 </head>
 <body>
   <div class="site-container">
-    <div id="btn-leng-mode">
-      <button id="lenguage-btn" class="leng">Español?</button>
-    </div>
-    <header id="f-header"></header>
+    <header id="f-header" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1000"></header>
     <main id="f-main">
-      <section id="mainSection" class="section"></section>
-      <section id="aboutMeSection" class="section"></section>
-      <section id="skillsSection" class="section"></section>
-      <section id="certificateSection" class="section"></section>
-      <section id="portfolioSection" class="section"></section>
-      <section id="contactSection" class="section"></section>
+      <section id="mainSection" class="section" data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"></section>
+      <section id="aboutMeSection" class="section" data-aos="fade-right" data-aos-duration="1000" data-aos-easing="linear"></section>
+      <section id="skillsSection" class="section" data-aos="fade-left" data-aos-duration="1000" data-aos-easing="linear"></section>
+      <section id="certificateSection" class="section" data-aos="fade-right" data-aos-duration="1000" data-aos-easing="linear"></section>
+      <section id="portfolioSection" class="section" data-aos="fade-left" data-aos-duration="1000" data-aos-easing="linear"></section>
+      <section id="contactSection" class="section" data-aos="zoom-in" data-aos-duration="1000" data-aos-easing="linear"></section>
     </main>
     <footer id="m-footer">
       <div class="f-footer">
@@ -35,7 +34,10 @@
   <button id="home-btn" class="floating-btn">HOME</button>
   <!-- SCRIPT PARA SLIDER CON SLICK -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script> 
+  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <!-- SCRIPT AOS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>AOS.init();</script>
   <!-- SCRIPT LOGIC -->
   <script src="js/data.js"></script>
   <script src="js/slider.js"></script>

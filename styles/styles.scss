@@ -79,10 +79,16 @@ li{
     }
   }
   .h-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     button{
       background-color: $secondary-color;
       padding: 1vw 1.8vw;
       border-radius: .3vw;
+      font-size: 1rem;
+      color: $color-blue;
+      font-size: 1.4vw;
       cursor: pointer;
       a{
         color: $color-blue;
@@ -407,25 +413,6 @@ li{
   color: $secondary-color;
 }
 
-#btn-leng-mode{
-  display: flex;
-  justify-content: flex-end;
-  background-color: $primary-color;
-  padding: 1vw 4vw 0 4vw;
-  .leng{
-    background-color: $secondary-color;
-    color: $color-blue;
-    padding: 1vw 1.8vw;
-    border-radius: .3vw;
-    cursor: pointer;
-  }
-  button:hover{
-    transition: .6s ease;
-    background-color: $color-blue;
-    color: $secondary-color;
-  }
-}
-
 // SLIDERS ---------------------------------------
 
 .sliderStick{
@@ -576,7 +563,32 @@ li{
         }
     }
   }
-}
+  .sliderStick{
+    margin-bottom: 2rem;
+    width: 90%;
+    height: 250px;
+    .project{
+      margin: 0 10px;
+      .link{
+        img{
+          width: 180px;
+          height: 180px;
+        }
+        .certImg{
+          height: 180px;
+          width: 180px;
+        }
+      }
+    }
+    .slick-prev, .slick-next {
+      border: solid 2px $color-blue;
+      font-size: 2rem;
+    }
+    .slick-prev:hover, .slick-next:hover {
+      border: solid 2px $secondary-color;
+    }
+  };
+};
 @media screen and (max-width: 500px) {
   #f-header{
     .h-list{
@@ -588,8 +600,9 @@ li{
     }
     .h-btn{
       button{
+        font-size: 2vw;
         a{
-          font-size: 2.4vw;
+          font-size: 2vw;
         }
       }
     }
@@ -731,26 +744,46 @@ li{
   .floating-btn{
     padding: 25px 8px;
   }
-}
-@media screen and (max-width: 350px) {
-  #btn-leng-mode{
-    .leng{
-      font-size: 3vw;
-      padding: .6vw 1.2vw;
+  .sliderStick{
+    margin-bottom: 2rem;
+    width: 90%;
+    height: 250px;
+    .project{
+      margin: 0 10px;
+      .link{
+        img{
+          width: 150px;
+          height: 150px;
+        }
+        .certImg{
+          height: 150px;
+          width: 150px;
+        }
+      }
     }
-  }
+    .slick-prev, .slick-next {
+      border: solid 1px $color-blue;
+      font-size: 1.5rem;
+    }
+    .slick-prev:hover, .slick-next:hover {
+      border: solid 1px $secondary-color;
+    }
+  };
+};
+@media screen and (max-width: 350px) {
   #f-header{
     .h-list{
       nav{
         ul{
-          font-size: 2.7vw;
+          font-size: 2vw;
         }
       }
     }
     .h-btn{
       button{
+        font-size: 2vw;
         a{
-          font-size: 2.7vw;
+          font-size: 2vw;
         }
       }
     }
@@ -872,7 +905,33 @@ li{
     font-weight: normal;
     padding: 13px 5px;
   }
-}
+  .sliderStick{
+    margin-bottom: 2rem;
+    width: 90%;
+    height: 150px;
+    .project{
+      margin: 0 10px;
+      .link{
+        img{
+          width: 100px;
+          height: 100px;
+        }
+        .certImg{
+          height: 100px;
+          width: 100px;
+        }
+      }
+    }
+    .slick-prev, .slick-next {
+      border: solid 1px $color-blue;
+      font-size: 1rem;
+      margin: 0;
+    }
+    .slick-prev:hover, .slick-next:hover {
+      border: solid 1px $secondary-color;
+    }
+  };
+};
 @media screen and (max-width: 250px) {
   #m-footer{
     .f-footer{
@@ -886,39 +945,5 @@ li{
     #f-footer{
       display: none;
     }
-  }
-}
-
-// ANIMATE SECTIONS ---------------------
-
-.section {
-  opacity: 0;
-  transform: translateX(-100%);
-  animation: slide-in 1s forwards;
-}
-
-.section.out {
-  animation: slide-out 1s forwards;
-}
-
-@keyframes slide-in {
-  from {
-    opacity: 0;
-    transform: translateX(-100%);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-@keyframes slide-out {
-  from {
-    opacity: 1;
-    transform: translateX(0);
-  }
-  to {
-    opacity: 0;
-    transform: translateX(-100%);
-  }
-}
+  };
+};
