@@ -223,47 +223,58 @@ const ing = [
 const projects = [
   {
     src: "1",
-    route: "https://vict0r89.github.io/2048-Game/"
+    route: "https://vict0r89.github.io/2048-Game/",
+    text: "2048 GAME"
   },
   {
     src: "3",
-    route: "https://vict0r89.github.io/ContadorDeClicks/"
+    route: "https://vict0r89.github.io/ContadorDeClicks/",
+    text: "CLICK COUNTER"
   },
   {
     src: "9",
-    route: "https://vict0r89.github.io/PiedraPapelTijera/"
+    route: "https://vict0r89.github.io/PiedraPapelTijera/",
+    text: "ROCK PAPER SCISSORS"
   },
   {
     src: "4",
-    route: "https://vict0r89.github.io/eCommerce-website/"
+    route: "https://vict0r89.github.io/eCommerce-website/",
+    text: "E-COMMERCE"
   },
   {
     src: "10",
-    route: "https://vict0r89.github.io/ToDo-App/"
+    route: "https://vict0r89.github.io/ToDo-App/",
+    text: "ToDo APP"
   },
   {
     src: "2",
-    route: "https://vict0r89.github.io/Calculator/"
+    route: "https://vict0r89.github.io/Calculator/",
+    text: "CALCULATOR"
   },
   {
     src: "5",
-    route: "https://vict0r89.github.io/Pac-Warrior/"
+    route: "https://vict0r89.github.io/Pac-Warrior/",
+    text: "PAC-WARRIOR"
   },
   {
     src: "6",
-    route: "https://vict0r89.github.io/pomodoroTimer/"
+    route: "https://vict0r89.github.io/pomodoroTimer/",
+    text: "POMODORO"
   },
   {
     src: "7",
-    route: "https://vict0r89.github.io/Piano-teclado/"
+    route: "https://vict0r89.github.io/Piano-teclado/",
+    text: "PIANO"
   },
   {
     src: "8",
-    route: "https://vict0r89.github.io/BreakOut-Game/"
+    route: "https://vict0r89.github.io/BreakOut-Game/",
+    text: "BREAKOUT"
   },
   {
     src: "11",
-    route: "https://vict0r89.github.io/MemoryGame/"
+    route: "https://vict0r89.github.io/MemoryGame/",
+    text: "MEMORY GAME"
   },
 ];
 

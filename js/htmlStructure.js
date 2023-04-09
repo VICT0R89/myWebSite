@@ -108,12 +108,29 @@ const addSkills = () =>{
             <p>${name}</p>
           </div>
           <div class="skill-bar">
-            <div class="bar-fill" style="width: ${value}%"></div>
+            <div class="bar-fill" data-value=${value}></div>
           </div>
         </div>
       `
     }).join("")
   )
+};
+
+const addProgressBar = () =>{
+  const bars = document.querySelectorAll(".skill-bar .bar-fill")
+  bars.forEach((bar)=>{
+    const value = bar.getAttribute('data-value');
+    let currentW = 0;
+    const interval = setInterval(()=>{
+      if(currentW >= value){
+        clearInterval(interval)
+      }
+      else {
+        currentW++
+        bar.style.width = currentW+'%'
+      }
+    }, 1)
+  })
 };
 
 const addCertificatesTitle = () =>{
@@ -181,11 +198,12 @@ const addProjects = () => {
   const proj = document.getElementById("port-item");
   return (proj.innerHTML =
     projects.map((item)=>{
-      let {src, route} = item
+      let {src, route, text} = item
       return `
         <div class="project">
           <a target="_blank" href="${route}" class="link">
-            <img src="img/img${src}.jpg" alt="projects">
+            <img src="img/img${src}.jpg" alt="projects" class="proImg">
+            ${text}
           </a>
         </div>
       `
@@ -317,6 +335,7 @@ const update = () =>{
   addAboutMe();
   addSkillsTitle();
   addSkills();
+  addProgressBar();
   addCertificatesTitle();
   addProjectsTitle();
   addContactInfoTitle();
@@ -329,21 +348,3 @@ const update = () =>{
   changeLeng();
 };
 update();
-
-/* window.addEventListener("scroll", function() {
-  let windowTop = window.pageYOffset || document.documentElement.scrollTop;
-
-  let sections = document.querySelectorAll(".section");
-  for (let i = 0; i < sections.length; i++) {
-    let section = sections[i];
-    let sectionTop = section.offsetTop;
-
-    if (windowTop > sectionTop - window.innerHeight / 2) {
-      section.classList.add("in");
-      section.classList.remove("out");
-    } else {
-      section.classList.add("out");
-      section.classList.remove("in");
-    }
-  }
-}); */
