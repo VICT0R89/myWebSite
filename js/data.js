@@ -237,6 +237,11 @@ const projects = [
     text: "ROCK PAPER SCISSORS"
   },
   {
+    src: "12",
+    route: "https://vict0r89.github.io/PiedraPapelTijeraLagartoSpock/",
+    text: "RPS + Lizard&Spock"
+  },
+  {
     src: "4",
     route: "https://vict0r89.github.io/eCommerce-website/",
     text: "E-COMMERCE"
