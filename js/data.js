@@ -281,6 +281,11 @@ const projects = [
     route: "https://vict0r89.github.io/MemoryGame/",
     text: "MEMORY GAME"
   },
+  {
+    src: "13",
+    route: "https://vict0r89.github.io/GiphySearch/",
+    text: "GIFT FINDER"
+  },
 ];
 
 const contactInfo = [
