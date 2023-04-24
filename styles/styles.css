@@ -511,6 +511,15 @@ li {
 }
 
 @media screen and (max-width: 850px) {
+  #f-header .h-list nav ul {
+    font-size: 2vw;
+  }
+  #f-header .h-btn button {
+    font-size: 2vw;
+  }
+  #f-header .h-btn button a {
+    font-size: 2vw;
+  }
   #mainSection .m-text h1 {
     font-size: 3.2vw;
     padding-bottom: 3vw;
@@ -645,6 +654,15 @@ li {
   }
 }
 @media screen and (max-width: 610px) {
+  #f-header .h-list nav ul {
+    font-size: 2vw;
+  }
+  #f-header .h-btn button {
+    font-size: 2vw;
+  }
+  #f-header .h-btn button a {
+    font-size: 2vw;
+  }
   .sliderStick {
     margin-bottom: 2rem;
     width: 90%;
@@ -668,13 +686,13 @@ li {
 }
 @media screen and (max-width: 500px) {
   #f-header .h-list nav ul {
-    font-size: 2.3vw;
+    font-size: 1.8vw;
   }
   #f-header .h-btn button {
-    font-size: 2vw;
+    font-size: 1.8vw;
   }
   #f-header .h-btn button a {
-    font-size: 2vw;
+    font-size: 1.8vw;
   }
   #mainSection .m-text {
     width: 100%;
@@ -806,13 +824,13 @@ li {
 }
 @media screen and (max-width: 350px) {
   #f-header .h-list nav ul {
-    font-size: 2vw;
+    font-size: 1.6vw;
   }
   #f-header .h-btn button {
-    font-size: 2vw;
+    font-size: 1.6vw;
   }
   #f-header .h-btn button a {
-    font-size: 2vw;
+    font-size: 1.6vw;
   }
   #mainSection .m-text h1 {
     font-size: 5vw;

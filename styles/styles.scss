@@ -491,6 +491,23 @@ li{
 };
 
 @media screen and (max-width: 850px) {
+  #f-header{
+    .h-list{
+      nav{
+        ul{
+          font-size: 2vw;
+        }
+      }
+    }
+    .h-btn{
+      button{
+        font-size: 2vw;
+        a{
+          font-size: 2vw;
+        }
+      }
+    }
+  }
   #mainSection{ 
     .m-text{
       h1{
@@ -645,6 +662,23 @@ li{
 };
 
 @media screen and (max-width: 610px){
+  #f-header{
+    .h-list{
+      nav{
+        ul{
+          font-size: 2vw;
+        }
+      }
+    }
+    .h-btn{
+      button{
+        font-size: 2vw;
+        a{
+          font-size: 2vw;
+        }
+      }
+    }
+  }
   .sliderStick{
     margin-bottom: 2rem;
     width: 90%;
@@ -674,15 +708,15 @@ li{
     .h-list{
       nav{
         ul{
-          font-size: 2.3vw;
+          font-size: 1.8vw;
         }
       }
     }
     .h-btn{
       button{
-        font-size: 2vw;
+        font-size: 1.8vw;
         a{
-          font-size: 2vw;
+          font-size: 1.8vw;
         }
       }
     }
@@ -854,15 +888,15 @@ li{
     .h-list{
       nav{
         ul{
-          font-size: 2vw;
+          font-size: 1.6vw;
         }
       }
     }
     .h-btn{
       button{
-        font-size: 2vw;
+        font-size: 1.6vw;
         a{
-          font-size: 2vw;
+          font-size: 1.6vw;
         }
       }
     }
