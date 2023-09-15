@@ -138,19 +138,19 @@ const skills = [
   },
   {
     name : "JS",
-    value : 80
+    value : 90
   },
   {
     name : "Git & GitHub",
-    value : 70
+    value : 80
   },
   {
     name : "JAVA",
-    value : 65
+    value : 75
   },
   {
     name : "Cloud Computing",
-    value : 50
+    value : 60
   },
   {
     name : "Soft Skills",
@@ -285,6 +285,11 @@ const projects = [
     src: "13",
     route: "https://vict0r89.github.io/GiphySearch/",
     text: "GIFT FINDER"
+  },
+  {
+    src: "14",
+    route: "https://vict0r89.github.io/ExamenFrontGutierrezVictor/",
+    text: "REACT"
   },
 ];
 
