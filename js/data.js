@@ -31,7 +31,7 @@ const headerText = [
 
 const mainText = [
   {
-    en : "I’m Víctor Gutiérrez",
+    en : "Víctor Gutiérrez",
     sp : "Víctor Gutiérrez"
   },
   {
@@ -39,8 +39,8 @@ const mainText = [
     sp : "Desarrollador de Software"
   },
   {
-    en : "Software development student at Digital House looking for my first work experience in the trade. I’m a dedicated person, focused and a lover of new challenges. Always managing a solid ethical structure, autonomy, analytical and problem-solving capacity, giving the best to grow together with colleagues.",
-    sp : "Soy estudiante de la carrera de Certified Tech Developer en Digital House y me encuentro en la búsqueda de mi primer experiencia laboral en el rubro. Soy una persona dedicada, enfocada y amante de los desafíos. Manejo una sólida estructura ética, autonomía, capacidad analítica y de resolución de problemas, dando siempre lo mejor de mí para crecer junto con los compañeros"
+    en : "Software developer at Wunderman Thompson Studios. I’m a dedicated person, focused and a lover of new challenges. Always managing a solid ethical structure, autonomy, analytical and problem-solving capacity, giving the best to grow together with colleagues.",
+    sp : "Desarrollador de software en Wunderman Thompson Studios. Soy una persona dedicada, enfocada y amante de los desafíos. Manejo una sólida estructura ética, autonomía, capacidad analítica y de resolución de problemas, dando siempre lo mejor de mí para crecer junto con los compañeros"
   },
   {
     en : "Download CV",
@@ -62,8 +62,8 @@ const aboutMeText = [
     sp : "Estoy dando mis primeros pasos en el mundo del Desarrollo de Software"
   },
   {
-    en : "I am a software development student living in Uruguay. I am passionate about learning and deepening in new technologies, as I am convinced that they can help many people to achieve a better quality of life.",
-    sp : "Soy un desarrollador de Software de Uruguay, con énfasis en Front End. Me apasiona aprender y profundizar en nuevas tecnologías, ya que estoy convencido de que pueden ayudar a muchas personas a mejorar su calidad de vida."
+    en : "I am a software development living in Uruguay. I am passionate about learning and deepening in new technologies, as I am convinced that they can help many people to achieve a better quality of life.",
+    sp : "Soy un desarrollador de software de Uruguay. Me apasiona aprender y profundizar en nuevas tecnologías, ya que estoy convencido de que pueden ayudar a muchas personas a mejorar su calidad de vida."
   },
   {
     en : "I really like challenges, teamwork, meeting people to grow together and in this new world I have realized that human values are above all. For this reason and because everyone can grow as much as they want and that depends on you, I have decided to dedicate my life to software development.",

@@ -99,6 +99,7 @@ li{
     button:hover{
       transition: .6s ease;
       background-color: $color-blue;
+      color: $secondary-color;
       a{
         color: $secondary-color;
       }

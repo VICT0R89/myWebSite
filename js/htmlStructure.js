@@ -45,7 +45,7 @@ const addMain = () => {
       ${ changeLenguage ? mainText[2].en : mainText[2].sp }
       </p>
       <button type="button">
-        <a target="_blank" href="https://drive.google.com/file/d/1ki9-aeiEqHjXlAjx6TRMMClc8TZOX5I1/view">${ changeLenguage ? mainText[3].en : mainText[3].sp }</a>
+        <a target="_blank" href="https://drive.google.com/file/d/1ki9-aeiEqHjXlAjx6TRMMClc8TZOX5I1/view?usp=drive_link">${ changeLenguage ? mainText[3].en : mainText[3].sp }</a>
       </button>      
     </div>
     <div class="img-main">
