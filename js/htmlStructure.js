@@ -1,8 +1,6 @@
-const header = document.getElementById("f-header");
-const btnHome = document.getElementById("home-btn");
-
-
-let changeLenguage = true;
+const header = document.getElementById("f-header")
+const btnHome = document.getElementById("home-btn")
+let changeLenguage = true
 
 const addHeader = () => {
   return header.innerHTML = `
@@ -29,10 +27,10 @@ const addHeader = () => {
       <button id="lenguage-btn" class="leng">${ changeLenguage ? headerText[6].en : headerText[6].sp }</button>
     </div>
   `
-};
+}
 
 const addMain = () => {
-  const mainSection = document.getElementById("mainSection");
+  const mainSection = document.getElementById("mainSection")
   return mainSection.innerHTML = `
     <div class="m-text">
       <h1>      
@@ -52,10 +50,10 @@ const addMain = () => {
         <img src="img/${imgMain.src}" alt=" Mi foto de fondo">
       </div>
   `
-};
+}
 
 const addAboutMe = () => {
-  const aboutMeSection = document.getElementById("aboutMeSection");
+  const aboutMeSection = document.getElementById("aboutMeSection")
   return aboutMeSection.innerHTML = `
     <div class="a-img-cont">
       <div class="img-marco">
@@ -82,10 +80,10 @@ const addAboutMe = () => {
       </div>
     </div>
   `
-};
+}
 
 const addSkillsTitle = () => {
-  const skill = document.getElementById("skillsSection");
+  const skill = document.getElementById("skillsSection")
   return skill.innerHTML = `
   <div class="s-title">
     <h1>${ changeLenguage ? skillsText[0].en : skillsText[0].sp }</h1>
@@ -95,13 +93,13 @@ const addSkillsTitle = () => {
   </p>
   <div id="mySkillsSection"></div>
   `
-};
+}
 
 const addSkills = () =>{
-  const mySkillsSection = document.getElementById("mySkillsSection");
+  const mySkillsSection = document.getElementById("mySkillsSection")
   return (mySkillsSection.innerHTML =     
     skills.map((x)=>{
-      let {name, value} = x;
+      let {name, value} = x
       return`        
         <div class="skills-bars">
           <div class="s-p-container">
@@ -114,13 +112,13 @@ const addSkills = () =>{
       `
     }).join("")
   )
-};
+}
 
 const addProgressBar = () =>{
   const bars = document.querySelectorAll(".skill-bar .bar-fill")
   bars.forEach((bar)=>{
-    const value = bar.getAttribute('data-value');
-    let currentW = 0;
+    const value = bar.getAttribute('data-value')
+    let currentW = 0
     const interval = setInterval(()=>{
       if(currentW >= value){
         clearInterval(interval)
@@ -131,10 +129,10 @@ const addProgressBar = () =>{
       }
     }, 1)
   })
-};
+}
 
 const addCertificatesTitle = () =>{
-  const certificate = document.getElementById("certificateSection");
+  const certificate = document.getElementById("certificateSection")
   certificate.innerHTML = `
     <div class="c-title">
       <h1>${ changeLenguage ? certificateText[0].en : certificateText[0].sp }</h1>
@@ -147,10 +145,10 @@ const addCertificatesTitle = () =>{
       <section id="insign" class="sliderStick"></section>
     </div>
   `
-};
+}
 
 const addCertificates = () => {
-  const certSection = document.getElementById("certificates");
+  const certSection = document.getElementById("certificates")
   return (certSection.innerHTML =
     certificates.map((item)=>{
       let {imgSrc, route} = item
@@ -163,10 +161,10 @@ const addCertificates = () => {
       `
     }).join("")
   )
-};
+}
 
 const addIng = () => {
-  const insign = document.getElementById("insign");
+  const insign = document.getElementById("insign")
   return (insign.innerHTML =
     ing.map((item)=>{
       let {imgSrc, route} = item
@@ -179,10 +177,10 @@ const addIng = () => {
       `
     }).join("")
   )
-};
+}
 
 const addProjectsTitle = () => {
-  const projects = document.getElementById("portfolioSection");
+  const projects = document.getElementById("portfolioSection")
   projects.innerHTML = `
     <div class="port-title">
       <h2>${ changeLenguage ? portTitleText[0].en : portTitleText[0].sp }</h2>
@@ -191,11 +189,11 @@ const addProjectsTitle = () => {
     <div class="portDiv">
       <section id="port-item" class="sliderStick portSlider"></section>
     </div>
-    `
-};
+  `
+}
 
 const addProjects = () => {
-  const proj = document.getElementById("port-item");
+  const proj = document.getElementById("port-item")
   return (proj.innerHTML =
     projects.map((item)=>{
       let {src, route, text} = item
@@ -209,10 +207,10 @@ const addProjects = () => {
       `
     }).join("")
   )
-};
+}
 
 const addContactInfoTitle = () => {
-  const contact = document.getElementById("contactSection");
+  const contact = document.getElementById("contactSection")
   contact.innerHTML = `
     <div class="contact-title">
       <h2 class="title">${ changeLenguage ? contactText[0].en : contactText[0].sp }</h2>
@@ -225,13 +223,13 @@ const addContactInfoTitle = () => {
       </div>
     </div>
   `
-};
+}
 
 const addContactInfo = () =>{
-  const contact = document.getElementById("contactInfo");
+  const contact = document.getElementById("contactInfo")
   return (contact.innerHTML =
     contactInfo.map ((x) => {
-      let { icono, title, info, href } = x;
+      let { icono, title, info, href } = x
       return `
       <div class= "contact-img-info">
         <div class = "icono">
@@ -244,14 +242,14 @@ const addContactInfo = () =>{
       </div>
       `
     }).join("")
-  );
-};
+  )
+}
 
 const addContact = () =>{
-  const contact2 = document.getElementById("contactInfo2");
+  const contact2 = document.getElementById("contactInfo2")
   return (contact2.innerHTML = 
     contactInfo2.map((x)=>{
-      let { icono, title, info, url } = x;
+      let { icono, title, info, url } = x
       return `
       <div class= "contact-img-info">
         <div class = "icono">
@@ -264,14 +262,14 @@ const addContact = () =>{
       </div>
       `
     }).join("")
-  );
-};
+  )
+}
 
 const addFooter = () => {
-  const footer = document.getElementById("f-footer");
+  const footer = document.getElementById("f-footer")
   return (footer.innerHTML =
     footerIcons.map((x) => {
-      let { icono, src } = x;
+      let { icono, src } = x
       return `
       <div class= "foot-img-container">
         <a href=${src} target="_blank">
@@ -280,71 +278,71 @@ const addFooter = () => {
       </div>
       `
     }).join("")
-    );
-};
+    )
+}
 
 window.onscroll = function() {
-  if (window.pageYOffset > header.offsetHeight) {
-    btnHome.style.display = "block";
+  if (window.scrollY > header.offsetHeight) {
+    btnHome.style.display = "block"
   } else {
-    btnHome.style.display = "none";
+    btnHome.style.display = "none"
   }
-};
+}
 
 btnHome.addEventListener('click', () =>{
-  header.scrollIntoView({behavior:"smooth"});
-});
+  header.scrollIntoView({behavior:"smooth"})
+})
 
 const changeLeng = () => {
-  const btnLeng = document.getElementById("lenguage-btn");
+  const btnLeng = document.getElementById("lenguage-btn")
   btnLeng.addEventListener('click', () =>{
     if(changeLenguage){
-      changeLenguage = false;
-      btnLeng.innerText = "English?";
-      btnHome.innerText = "INICIO";
-      update();
+      changeLenguage = false
+      btnLeng.innerText = "English?"
+      btnHome.innerText = "INICIO"
+      update()
     } else {
-      changeLenguage = true;
+      changeLenguage = true
       btnLeng.innerText = "Español?"
-      btnHome.innerText = "HOME";
-      update();
+      btnHome.innerText = "HOME"
+      update()
     }
-  });
-};
+  })
+}
 
 const addSlider = () =>{
-  addCertificates();
-  addIng();
-  addProjects();
-};
+  addCertificates()
+  addIng()
+  addProjects()
+}
 
 const addAnimateTime = () => {
-  let sectionLinks = document.querySelectorAll("a[href^='#']");
+  let sectionLinks = document.querySelectorAll("a[href^='#']")
   sectionLinks.forEach((a, i) => {
     a.addEventListener("click", e => {
       e.preventDefault()
-      let target = document.querySelector(e.target.getAttribute("href"));
+      let target = document.querySelector(e.target.getAttribute("href"))
       target.scrollIntoView({behavior: "smooth"})
     })
   })
-};
+}
 
 const update = () =>{
-  addHeader();
-  addMain();
-  addAboutMe();
-  addSkillsTitle();
-  addSkills();
-  addProgressBar();
-  addCertificatesTitle();
-  addProjectsTitle();
-  addContactInfoTitle();
-  addContactInfo();
-  addContact();
-  addFooter();
-  addSlider();
-  slickFunction();
-  addAnimateTime();
-  changeLeng();
-};
-update();
+  addHeader()
+  addMain()
+  addAboutMe()
+  addSkillsTitle()
+  addSkills()
+  addProgressBar()
+  addCertificatesTitle()
+  addProjectsTitle()
+  addContactInfoTitle()
+  addContactInfo()
+  addContact()
+  addFooter()
+  addSlider()
+  slickFunction()
+  addAnimateTime()
+  changeLeng()
+}
+update()

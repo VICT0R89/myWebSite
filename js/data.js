@@ -27,7 +27,7 @@ const headerText = [
     en : "Español?",
     sp : "English?"
   },
-];
+]
 
 const mainText = [
   {
@@ -46,7 +46,7 @@ const mainText = [
     en : "Download CV",
     sp : "Descargar CV"
   },
-];
+]
 
 const aboutMeText = [
   {
@@ -77,7 +77,7 @@ const aboutMeText = [
     en : "VIEW RESUME",
     sp : "VER CV"
   },
-];
+]
 
 const skillsText = [
   {
@@ -99,7 +99,7 @@ const certificateText = [
     en : "In this space you will find the certificates and badges that I have obtained through different careers or courses.",
     sp : "En este espacio encontrarás los diplomas e insignias que he ido obteniendo a través de diferentes carreras o cursos."
   },
-];
+]
 
 const portTitleText = [
   {
@@ -110,7 +110,7 @@ const portTitleText = [
     en : "In this space you will find the projects that I am developing in my career and those that I am developing in a self-taught way.",
     sp : "En este espacio encontrarás los proyectos que he ido desarrollando en mi carrera o de forma individual."
   },
-];
+]
 
 const contactText = [
   {
@@ -121,42 +121,42 @@ const contactText = [
     en : "Feel free to contact me by any of the following ways.",
     sp : "Siéntete libre de contactarme a través de cualquiera de los siguientes medios."
   },
-];
+]
 
 const skills = [
   {
     name : "Agile",
-    value : 80
+    value : 95
   },
   {
-    name : "HTML, CSS, SASS",
-    value : 80
+    name : "HTML CSS SASS & TAILWIND",
+    value : 95
   },
   {
     name : "MySQL",
-    value : 60
+    value : 70
   },
   {
-    name : "JS",
+    name : "JS TS Vue & React",
     value : 90
   },
   {
-    name : "Git & GitHub",
+    name : "Git GitHub & Bitbucket",
     value : 80
   },
   {
-    name : "JAVA",
+    name : "JAVA SPRINGBOOT",
     value : 75
   },
   {
-    name : "Cloud Computing",
+    name : "Cloud Computing AWS",
     value : 60
   },
   {
     name : "Soft Skills",
     value : 100
   }
-];
+]
 
 const certificates = [
   {
@@ -187,7 +187,7 @@ const certificates = [
     imgSrc : "7",
     route : "https://coursera.org/share/0b7382ba9dea0354a7aac2440425f8f8"
   },
-];
+]
 
 const ing = [
   {
@@ -218,7 +218,7 @@ const ing = [
     imgSrc : "7",
     route : "https://www.credly.com/badges/0ccaf8fe-2923-4f32-9ad3-013eac9ca5d0/public_url"
   },
-];
+]
 
 const projects = [
   {
@@ -296,7 +296,7 @@ const projects = [
     route: "https://vict0r89.github.io/timer-AdventJS/",
     text: "Timer"
   },
-];
+]
 
 const contactInfo = [
   {
@@ -311,7 +311,7 @@ const contactInfo = [
     info : "victor4guiar89@gmail.com",
     href : "mailto:victor4guiar89@gmail.com?subject=Mensaje%20desde%20el%20formulario&body=Nombre:%20%0AMensaje:%20"
   }
-];
+]
 
 const contactInfo2 = [
   {
@@ -345,9 +345,9 @@ const footerIcons = [
 
 const imgMain = {
   src : "imgMain-fondo.png"
-};
+}
 
 const imgAboutMe = {
   src : "imgAboutMe.png"
-};
+}
 
