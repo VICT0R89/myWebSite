@@ -120,6 +120,9 @@ li {
   display: flex;
   justify-content: center;
 }
+#mainSection .img-main img {
+  border-radius: 50%;
+}
 
 #aboutMeSection {
   display: flex;
@@ -537,6 +540,16 @@ li {
   #mainSection .m-text button a {
     font-size: 2vw;
   }
+  #mainSection .img-main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #mainSection .img-main img {
+    width: 75%;
+    height: 75%;
+    border-radius: 50%;
+  }
   #aboutMeSection .a-img-cont {
     align-items: center;
   }
@@ -695,6 +708,10 @@ li {
   #f-header .h-btn button a {
     font-size: 1.8vw;
   }
+  #mainSection {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
   #mainSection .m-text {
     width: 100%;
     padding-top: 10px;
@@ -715,8 +732,8 @@ li {
   #mainSection .m-text button a {
     font-size: 2.2vw;
   }
-  #mainSection .img-main {
-    display: none;
+  #mainSection .img-main img {
+    border-radius: 50%;
   }
   #aboutMeSection .a-img-cont {
     display: none;
