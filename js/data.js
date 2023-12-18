@@ -291,6 +291,11 @@ const projects = [
     route: "https://vict0r89.github.io/ExamenFrontGutierrezVictor/",
     text: "REACT"
   },
+  {
+    src: "15",
+    route: "https://vict0r89.github.io/timer-AdventJS/",
+    text: "Timer"
+  },
 ];
 
 const contactInfo = [
