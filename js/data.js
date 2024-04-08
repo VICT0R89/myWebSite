@@ -296,6 +296,11 @@ const projects = [
     route: "https://vict0r89.github.io/timer-AdventJS/",
     text: "Timer"
   },
+  {
+    src: "16",
+    route: "https://ctd-esp-fe1-final-zeta.vercel.app/",
+    text: "Rick&Morty"
+  }
 ]
 
 const contactInfo = [
